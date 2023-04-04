@@ -14,3 +14,8 @@ ol {
     list-style: decimal;
     padding: 1rem;
 }
+
+img {
+    width: 200px;
+    height: 300px;
+  }
