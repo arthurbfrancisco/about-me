@@ -175,5 +175,11 @@ ol {
     background-color: #765858; /* Sets a background color for the footer */
   }
  
-  
-  
+/* element behave on web page
+position: static; //  this is the default value that comes with code  
+
+position: relative; // this can overlap on the page
+
+positon; absolute; // will scroll
+
+position: fixed; will not scroll
