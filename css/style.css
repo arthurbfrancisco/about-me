@@ -9,7 +9,13 @@
 
 h1 {
     font-size: 3rem;
-}
+      font-size: 3rem;
+      text-align: center; /* Centers the content horizontally */
+      display: flex; /* Makes the container a flex container */
+      justify-content: center; /* Centers the flex items vertically */
+      align-items: center; /* Centers the flex items horizontally */
+      height: 20vh; /* Sets the height of the container to the viewport height */
+  }
 
 
 ul {
@@ -43,18 +49,47 @@ ol {
 
 .para1 {
     text-align: center; /* center the paragraph in the middle of the page */
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
   .para1 p {
-    margin-top: 20px; /* add 20px of space at the top */
-    margin-bottom: 20px; /* add 20px of space at the bottom */
-    max-width: 600px; /* limit the maximum width of the paragraph */
+    margin-top: 40px; /* add 20px of space at the top */
+    margin-bottom: 10px; /* add 20px of space at the bottom */
+    max-width: 800px; /* limit the maximum width of the paragraph */
     margin-left: auto; /* push the paragraph to the center of the page */
     margin-right: auto; /* push the paragraph to the center of the page */
   }
+  .para2 {
+    text-align: center; /* center the paragraph in the middle of the page */
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .para2 p {
+    margin-top: 10px; /* add 20px of space at the top */
+    margin-bottom: 10px; /* add 20px of space at the bottom */
+    max-width: 800px; /* limit the maximum width of the paragraph */
+    margin-left: auto; /* push the paragraph to the center of the page */
+    margin-right: auto; /* push the paragraph to the center of the page */
+  }
+  .para3 {
+    text-align: center; /* center the paragraph in the middle of the page */
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .para3 p {
+    margin-top: 10px; /* add 20px of space at the top */
+    margin-bottom: 10px; /* add 20px of space at the bottom */
+    max-width: 800px; /* limit the maximum width of the paragraph */
+    margin-left: auto; /* push the paragraph to the center of the page */
+    margin-right: auto; /* push the paragraph to the center of the page */
+  }
+  
   
   .container {
     max-width: 800px;
@@ -118,6 +153,10 @@ ol {
   hr {
     border-style: 3px dotted;
   }
-  
+
+  nav {
+    display: flex; /* Makes the container a flex container */
+    justify-content: center; /* Centers the flex items horizontally */
+  }
 
   
