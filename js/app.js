@@ -22,16 +22,20 @@ if (placeOfBirth === 'y' || placeOfBirth === 'yes') {
 
 birthQ;
 
+function horrorQ(){
+let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
 
-// let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
+if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) {
+  alert('You are right, I love watching horror movies.');
+} else if (likeHorrorFlick === 'n' || likeHorrorFlick === 'no') {
+  alert('You are wrong. I enjoy horror movies.');
+} else {
+  alert('You need to answer with \'yes\' or \'no\'.');
+}
+}
 
-// if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) {
-//   alert('You are right, I love watching horror movies.');
-// } else if (likeHorrorFlick === 'n' || likeHorrorFlick === 'no') {
-//   alert('You are wrong. I enjoy horror movies.');
-// } else {
-//   alert('You need to answer with \'yes\' or \'no\'.');
-// }
+horrorQ();
+
 
 // // High low, guessing 
 // let placesVisited = 6;
