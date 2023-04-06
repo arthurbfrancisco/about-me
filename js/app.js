@@ -7,7 +7,7 @@ alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used 
 
 let city = prompt('Where are you from?');
 alert(`I've never been there, but it must be a great place to travel to, ${city}.`);
-
+//Places 
 let placeOfBirth = prompt('Was I born in California?');
 console.log(placeOfBirth);
 
@@ -19,7 +19,7 @@ if (placeOfBirth === 'y' || placeOfBirth === 'yes') {
   alert('Please answer with a "yes" or "no".');
 }
 
-
+// Horrors
 let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
 
 if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) {
@@ -29,7 +29,7 @@ if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) {
 } else {
   alert('You need to answer with \'yes\' or \'no\'.');
 }
-
+//Guess the number of places 
 // High low, guessing 
 let placesVisited = 6;
 
@@ -65,12 +65,12 @@ alert(`The correct number of places I have visited is ${placesVisited}. These pl
 let myFavIceCream = 'rocky road'; // starting in the beginning
 
 let attemptsRemaining = 6;
+let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
 
 while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
   attemptsRemaining--; //how many attempts left
   console.log(`You have ${attemptsRemaining} attempts remaining.`);
 
-  let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
 
   if (myFavIceCream === userResponse) {
     console.log('You are right!');
@@ -80,8 +80,33 @@ if (attemptsRemaining === 0) {
   console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
 }
 
-
-
+//Food Fav
+function foodQ() {
+  let attempts = 6;
+  let topFood = ['Mexican', 'Chinese', 'Indian', 'Italian'];
+  let userPoints = 0;
+  let correct = false;
+  while (attempts >= 1 && !correct) {
+    attempts--;
+    let foodAnswer = prompt('What is one of my favorite dishes?');
+    for (let i = 0; i < topFood.length; i++) {
+      if (foodAnswer.toLowerCase() === topFood[i].toLowerCase()) {
+        alert('Correct! I love ' + topFood[i] + ' food!');
+        userPoints++;
+        correct = true;
+        break;
+      }
+    }
+    if (attempts === 1) {
+      alert('You are out of guesses!');
+      break;
+    }
+    if (!correct) {
+      alert('Sorry, that is not one of my favorite dishes. Please try again.');
+    }
+  }
+  alert('You got ' + userPoints + ' point(s)!');
+}
 console.log(placeOfBirth);
 console.log(likeHorrorFlick);
 console.log(myFavIceCream);
@@ -111,7 +136,7 @@ console.log(placesVisited);
 // 
 
 
-'use strict'
+/**'use strict'
 let name = 'Pam'
 console.log
 
