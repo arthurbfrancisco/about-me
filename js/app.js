@@ -14,7 +14,7 @@ console.log(placeOfBirth);
 if (placeOfBirth === 'y' || placeOfBirth === 'yes') {
   alert('No, I was actually born in the Philippines but raised in America.');
 } else if (placeOfBirth === 'n' || placeOfBirth === 'no') {
-  alert('You are correct. I was born in the Philippines and am a first generation immigrant.');
+  alert('You are correct. I was born in the Philippines and I am a first generation immigrant.');
 } else {
   alert('Please answer with a "yes" or "no".');
 }
@@ -66,17 +66,16 @@ let myFavIceCream = 'rocky road'; // starting in the beginning
 
 let attemptsRemaining = 6;
 
-while (attemptsRemaining > 0 && userResponse !== myFavIceCream) {
+while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
   attemptsRemaining--;
   console.log(`You have ${attemptsRemaining} attempts remaining.`);
 
   let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
 
-  if (userResponse === myFavIceCream) {
+  if (myFavIceCream === userResponse) {
     console.log('You are right!');
   }
 }
-
 if (attemptsRemaining === 0) {
   console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
 }
