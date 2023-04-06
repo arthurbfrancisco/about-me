@@ -62,64 +62,63 @@ function visitQ() {
       guessCount--;
       alert(`Incorrect. The number of places I have visited is lower. You have ${guessCount} guesses left.`);
     }
+    // Input correct answer
+    alert(`The correct number of places I have visited is ${placesVisited}. These places are Thailand, Vietnam, Cambodia, Bali, Philippines, and South Korea.`);
+
   }
 }
 
 visitQ();
 
-// // Input correct answer
-// alert(`The correct number of places I have visited is ${placesVisited}. These places are Thailand, Vietnam, Cambodia, Bali, Philippines, and South Korea.`);
+function iceQ() {
+  // What is my favorite ice cream
+
+  let myFavIceCream = 'rocky road'; // starting in the beginning
+
+  let attemptsRemaining = 6;
+
+  let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
+  while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
+    attemptsRemaining--; //how many attempts left
+    console.log(`You have ${attemptsRemaining} attempts remaining.`);
+    if (myFavIceCream === userResponse) {
+      console.log('You are right!');
+    }
+  }
+  if (attemptsRemaining === 0) {
+    console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
+  }
+}
+
+iceQ();
+
+console.log(placeOfBirth);
+console.log(likeHorrorFlick);
+console.log(myFavIceCream);
+console.log(placesVisited);
+
+// 6th question: Guess Game: use array , 4 chances to get right, if not : "Nope, you got it wromg", Too low or Too Hight
+// need Loops: if else, 
+
+// 7th question: Name one of my favorite horror flick? , prompt('Yes, that's rignt'); 6 attemps, Display all at the end
+// .inludes() or .join() are not allowed!
+
+// example of code
+//    while loop
+//   let attempRemaining = 4;
+
+//      while () {      // have a condtion that will be false, so it does not do infinite
+//    attempRemaining--;
+//       console.log('You were close! You have ${attemptsRemaining}');
 
 
-// // What is my favorite ice cream
-
-// let myFavIceCream = 'rocky road'; // starting in the beginning
-
-// let attemptsRemaining = 6;
-
-// while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
-//   attemptsRemaining--; //how many attempts left
-//   console.log(`You have ${attemptsRemaining} attempts remaining.`);
-
-//   let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
-
-//   if (myFavIceCream === userResponse) {
-//     console.log('You are right!');
-//   }
-// }
-// if (attemptsRemaining === 0) {
-//   console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
-// }
+// for loop, create list option[list], have multiple answer, 
 
 
+//   for (let i = 0; i < attempts; i++) {
+//   6 - 0 = 6 -1 = 6 this will get to start at 1 attempt then console.log to next attempt
+// console.log('You are getting closer. You have ${attempts - i - 1} attempts remaining ')
 
-// console.log(placeOfBirth);
-// console.log(likeHorrorFlick);
-// console.log(myFavIceCream);
-// console.log(placesVisited);
-
-// // 6th question: Guess Game: use array , 4 chances to get right, if not : "Nope, you got it wromg", Too low or Too Hight
-// // need Loops: if else, 
-
-// // 7th question: Name one of my favorite horror flick? , prompt('Yes, that's rignt'); 6 attemps, Display all at the end
-// // .inludes() or .join() are not allowed!
-
-// // example of code
-// //    while loop
-// //   let attempRemaining = 4;
-
-// //      while () {      // have a condtion that will be false, so it does not do infinite
-// //    attempRemaining--;
-// //       console.log('You were close! You have ${attemptsRemaining}');
-// //
-
-// //for loop, create list option[list], have multiple answer, 
-
-
-// //   for (let i = 0; i < attempts; i++) {
-// //   6 - 0 = 6 -1 = 6 this will get to start at 1 attempt then console.log to next attempt
-// // console.log('You are getting closer. You have ${attempts - i - 1} attempts remaining ')
-// // 
 
 
 // 'use strict'
