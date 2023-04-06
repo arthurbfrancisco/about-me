@@ -114,6 +114,10 @@ ol {
     width: 1em;
     margin-left: -1em;
   }
+
+  hr {
+    border-style: 3px dotted;
+  }
   
 
   
