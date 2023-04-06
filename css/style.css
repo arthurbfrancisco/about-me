@@ -154,9 +154,26 @@ ol {
     border-style: 3px dotted;
   }
 
-  nav {
-    display: flex; /* Makes the container a flex container */
-    justify-content: center; /* Centers the flex items horizontally */
-  }
+  .top-nav {
+      text-align: center;
+      text-transform: uppercase;
+      padding: 10px;
+      padding-top: 0px;
+      background-color: #0a0a23;
+      color: #fff;
+      border-bottom: 10px solid#f0730c; /* Orange line accent for border*/
+    } 
 
+
+  footer {
+    text-align: center; /* Centers the content horizontally */
+    position: fixed; /* Makes the footer stay at the bottom of the viewport */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Sets the width of the footer to 100% of the viewport */
+    padding: 0.5rem; /* Adds some padding to the footer for better spacing */
+    background-color: #765858; /* Sets a background color for the footer */
+  }
+ 
+  
   
