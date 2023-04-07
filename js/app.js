@@ -67,7 +67,6 @@ function visitQ() {
 
   }
 }
-
 visitQ();
 // Ice cream
 function iceQ() {
@@ -89,16 +88,12 @@ function iceQ() {
     console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
   }
 }
-
 iceQ();
 
-
 //Food fav
-
-//Food
 function foodQ() {
   let attempts = 6;
-  let topFood = [‘Mexican’, ‘Chinese’, ‘Indian’,'Italian'];
+  let topFood = [Mexican, Chinese, Indian,Italian];
   let correct = false;
   while (attempts >= 1 && !correct) {
     attempts--;
