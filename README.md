@@ -2,9 +2,9 @@
 
 ## About-me
 
-About me project
+About me project: Keep track of work progress and note taking skill.
 
-### Author: Student/Group Name
+### Author, Arthur B. Francisco
 
 ### Links and Resources
 
@@ -13,9 +13,9 @@ About me project
 
 ### Lighthouse Accessibility Report Score
 
-* [Lab01:](link)
-* [Lab02:](link)
-* [Lab03:](link)
+* [Lab01:](img.)
+* [Lab02:](img/lighthouse_lab2.png)
+* [Lab03:](img/lighthouse_lab3.png)
 * [Lab04:](link)
 * [Lab05:](link)
 * [Lab06:](link)
@@ -42,7 +42,7 @@ About me project
 * Lab 01:Hard
 * Lab 02:Tough
 * Lab 03:Frustrating
-* Lab 04:
+* Lab 04:Awful Day
 * Lab 05:
 * Lab 06:
 * Lab 07:
