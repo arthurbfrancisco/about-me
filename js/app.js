@@ -8,6 +8,13 @@ alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used 
 let city = prompt('Where are you from?');
 alert(`I've never been there, but it must be a great place to travel to, ${city}.`);
 
+// Funtion Declaration
+//function youAreCorrect(message) { //declaring youAreCorrect value Helper Function
+//userPoints+++; //add an increment to each function
+//c onsole.log(userPoints); // userPoints will console.log 
+//}
+
+
 function birthQ() {
   let placeOfBirth = prompt('Was I born in California?');
   console.log(placeOfBirth);
@@ -20,7 +27,7 @@ function birthQ() {
   }
 }
 // Bday
-birthQ;
+//birthQ;
 
 function horrorQ() {
   let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
@@ -34,7 +41,7 @@ function horrorQ() {
   }
 }
 // Horror
-horrorQ();
+//horrorQ();
 
 function visitQ() {
   // High low, guessing 
@@ -67,14 +74,16 @@ function visitQ() {
 
   }
 }
-visitQ();
+// EXCECUTABLE CODES
+
+//visitQ();
 // Ice cream
 function iceQ() {
   // What is my favorite ice cream
 
   let myFavIceCream = 'rocky road'; // starting in the beginning
 
-  let attemptsRemaining = 6;
+  let attemptsRemaining = 6; //attempt to try
 
   let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
   while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
@@ -93,82 +102,30 @@ iceQ();
 //Food fav
 function foodQ() {
   let attempts = 6;
-  let topFood = [Mexican, Chinese, Indian,Italian];
+  let favFood = ['mexican', 'chinese', 'indian','italian']; // answer will be lower case
   let correct = false;
   while (attempts >= 1 && !correct) {
     attempts--;
-    let foodAnswer = prompt(‘What is one of my favorite dish?’);
-    for (let i = 0; i <foodAnswer.length; i++) {
-      if (foodAnswer === foodAnswer[i]) {
-        alert(‘Correct! I love Mexican Food!’);
-        userPoints++;
+    let foodAnswer = prompt('What is my fav food');
+    console.log(foodAnswer);
+    for (let i = 0; i <favFood.length; i++) {   
+      if (foodAnswer === favFood[i]) {
+        alert('Correct! I love Mexican Food!');
+        //userPoints++;
         correct = true;
         break;
       }
     }
     if (attempts === 1) {
-      alert(‘You are wrong, but your are getting closer!’);
+      alert('You are wrong, but your are getting closer!');
       break;
     }
     if (!correct) {
-      alert(‘Sorry but you need to try again!’);
+      alert('Sorry but you need to try again!');
     }
   }
 }
 foodQ();
-
-console.log(placeOfBirth);
-console.log(likeHorrorFlick);
-console.log(myFavIceCream);
-console.log(placesVisited);
-
-// 6th question: Guess Game: use array , 4 chances to get right, if not : "Nope, you got it wromg", Too low or Too Hight
-// need Loops: if else, 
-
-// 7th question: Name one of my favorite horror flick? , prompt('Yes, that's rignt'); 6 attemps, Display all at the end
-// .inludes() or .join() are not allowed!
-
-// example of code
-//    while loop
-//   let attempRemaining = 4;
-
-//      while () {      // have a condtion that will be false, so it does not do infinite
-//    attempRemaining--;
-//       console.log('You were close! You have ${attemptsRemaining}');
-//
-
-//for loop, create list option[list], have multiple answer, 
-
-
-//   for (let i = 0; i < attempts; i++) {
-//   6 - 0 = 6 -1 = 6 this will get to start at 1 attempt then console.log to next attempt
-// console.log('You are getting closer. You have ${attempts - i - 1} attempts remaining ')
-// 
-
-
-/**'use strict'
-let name = 'Pam'
-console.log
-
-//function declaration
-function birthDayGreeting (name, from = 'everyone in my contacts') {
-  // inside the curly{} is the code that will run when function in envoke
-  console.log('Happy bday, ${name}!');
-  console.log('Hope you have a wonderful day ${name}!');
-  console.log('${name} another year in the books!'); // quote mark
-  console.log(`Best of luck ${from}`); // textual literal for js backticks
-  return '${name} you are the best we love you from all of us!'; // return a message // when you do a break or return anything under wont run
-}
-// can evoke a function declaration before it has been declared
-//envoking or call the function:
-// "" is passed in as an "argument" to the key of "name"
-birthDayGreeting('Pam');
-birthDayGreeting('Mike');
-birthDayGreeting('Jay');
-// Dont use this one too complicated at this time
-let birthdayGreetAnotherWay = function() {
-console.log('Happy birthday shawty!');
-}
 
 
 
