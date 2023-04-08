@@ -19,14 +19,17 @@ h1 {
 
 
 ul {
-    list-style: disc;
+    list-style-type: none; 
+    /*to add a decimal//number/or none in webpage*/
     margin: 1rem;
 
 }
 
 ol {
-    list-style-position:inside;
-    list-style: decimal;
+    list-style-position:inside; 
+    /*Basically when second line puts in same vertical */
+    list-style: decimal; 
+    /*if you want the numbers dot to show*/
     padding: 1rem;
 }
 .image-container {
@@ -57,7 +60,6 @@ ol {
   .para1 p {
     margin-top: 40px; /* add 20px of space at the top */
     margin-bottom: 10px; /* add 20px of space at the bottom */
-  
     margin-left: auto; /* push the paragraph to the center of the page */
     margin-right: auto; /* push the paragraph to the center of the page */
   }
@@ -69,11 +71,10 @@ ol {
   }
   
   .para2 p {
-    margin-top: 10px; /* add 20px of space at the top */
-    margin-bottom: 10px; /* add 20px of space at the bottom */
+    margin-top: 12px; /* add 20px of space at the top */
+    margin-bottom: 12px; /* add 20px of space at the bottom */
     margin-left: auto; /* push the paragraph to the center of the page */
     margin-right: auto; /* push the paragraph to the center of the page */
-    max-width: 800px; /* limit the maximum width of the paragraph */
   }
   
   .para3 {
