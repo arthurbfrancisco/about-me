@@ -47,7 +47,7 @@ navigator arthur
 * Lab 02:Tough
 * Lab 03:Frustrating
 * Lab 04:Awful Day
-* Lab 05:
+* Lab 05:Wow, I'm finally done for the week. Remo on Saturday for tutoring
 * Lab 06:
 * Lab 07:
 * Lab 08:
