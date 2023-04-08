@@ -18,10 +18,10 @@ navigator arthur
 ### Lighthouse Accessibility Report Score
 
 * [Lab01:](img.)
-* [Lab02:](img/lighthouse_lab2.png)
-* [Lab03:](img/lighthouse_lab3.png)
-* [Lab04:](link)
-* [Lab05:](link)
+* ![Lab02:](img/lighthouse_lab02.png)
+* ![Lab03:](img/lighthouse_lab03.png)
+* ![Lab04:](img/lighthouse_lab04.png)
+* ![Lab05:](img/lighthouse_lab05.png)
 * [Lab06:](link)
 * [Lab07:](link)
 * [Lab08:](link)
