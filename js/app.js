@@ -165,6 +165,7 @@ function sportQ() {
       break;
     }
 
+    // Check if the user's answer is not correct
     if (!correct) {
       alert('Sorry, but you need to try again!');
     }
