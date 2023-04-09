@@ -11,12 +11,6 @@ alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used 
 let city = prompt('Where are you from?');
 alert(`I've never been there, but it must be a great place to travel to, ${city}.`);
 
-// Funtion Declaration
-//function youAreCorrect(message) { //declaring youAreCorrect value Helper Function
-//userPoints+++; //add an increment to each function
-//c onsole.log(userPoints); // userPoints will console.log
-//}
-
 //City Born
 function birthQ() {
   let placeOfBirth = prompt('Was I born in California?');
@@ -133,7 +127,9 @@ function foodQ() {
     }
   }
 }
+
 foodQ();
+
 //Sport
 // Declare the number of attempts the user has to answer the question correctly
 let attempts = 6;
