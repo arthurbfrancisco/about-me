@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* When you add the 'use strict'; directive at the top of your JavaScript file or function,]
  it will apply strict mode to all code within that scope.*/
 'use strict';
@@ -134,51 +135,53 @@ function foodQ() {
 }
 foodQ();
 //Sport
-function sportQ() {
-  // Declare the number of attempts the user has to answer the question correctly
-  let attempts = 6;
-  // Declare an array of favorite sports for the user to guesslet favSports = ['basketball'];
-  let correct = false;
-  // Flag to keep track of whether the user's answer is correct
-  let userPoints = 0;
-  let userAnswers = [];
-  // Loop while the user has remaining attempts and has not yet answered the question correctly
-  while (attempts >= 1 && !correct) {
-    attempts--;
-    // Display a prompt dialog asking the user to guess the favorite sport, and store the answer in a variable
-    let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis').toLowerCase();
-    //Add the user's answer to the userAnswers array
-    userAnswers.push(sportAnswer);
+// Declare the number of attempts the user has to answer the question correctly
+let attempts = 6;
+// Declare an array of favorite sports for the user to guess
+let favSports = ['basketball'];
+// Flag to keep track of whether the user's answer is correct
+let correct = false;
+let userPoints = 0;
+let userAnswers = [];
 
-    // Loop through each element in the favSports array
-    for (let i = 0; i < favSports.length; i++) {
+// Loop while the user has remaining attempts and has not yet answered the question correctly
+while (attempts >= 1 && !correct) {
+  attempts--;
+
+  // Display a prompt dialog asking the user to guess the favorite sport, and store the answer in a variable
+  let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis').toLowerCase();
+  //Add the user's answer to the userAnswers array
+  userAnswers.push(sportAnswer);
+
+  // Loop through each element in the favSports array
+  for (let i = 0; i < favSports.length; i++) {
     // Check if the user's answer matches the current element in the favSports array (ignoring case)
-      if (sportAnswer === favSports[i].toLowerCase()) {
+    if (sportAnswer === favSports[i].toLowerCase()) {
       // Display an alert message indicating that the answer is correct
-        alert('Correct! I love to watch and play basketball!');
-        userPoints++;
-        correct = true;
-        break;
-      }
-    }
-    if (attempts === 1) {
-      alert('You are wrong, but you are getting closer!');
+      alert('Correct! I love to watch and play basketball!');
+      userPoints++;
+      correct = true;
       break;
     }
-
-    // Check if the user's answer is not correct
-    if (!correct) {
-      alert('Sorry, but you need to try again!');
-    }
   }
-  //Create a message string that displays the user's score and the total number of possible points
-  let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
-  // Create a message string that displays the correct answer(s)
-  let answersMsg = `The correct answer is: ${favSports.join(', ')}.\n`;
-  // Create a message string that displays the user's answers
-  let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
-  // Display the three message strings concatenated together in a dialog box
-  alert(scoreMsg + answersMsg + userAnswersMsg);
+  if (attempts === 1) {
+    alert('You are wrong, but you are getting closer!');
+    break;
+  }
+
+  // Check if the user's answer is not correct
+  if (!correct) {
+    alert('Sorry, but you need to try again!');
+  }
 }
+
+//Create a message string that displays the user's score and the total number of possible points
+let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
+// Create a message string that displays the correct answer(s)
+let answersMsg = `The correct answer is: ${favSports.join(', ')}.\n`;
+// Create a message string that displays the user's answers
+let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
+// Display the three message strings concatenated together in a dialog box
+alert(scoreMsg + answersMsg + userAnswersMsg);
 
 sportQ();
