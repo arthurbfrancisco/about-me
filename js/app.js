@@ -15,7 +15,7 @@ alert(`I've never been there, but it must be a great place to travel to, ${city}
 //c onsole.log(userPoints); // userPoints will console.log
 //}
 
-
+//City Born
 function birthQ() {
   let placeOfBirth = prompt('Was I born in California?');
   console.log(placeOfBirth);
@@ -27,9 +27,9 @@ function birthQ() {
     alert('Please answer with a "yes" or "no".');
   }
 }
-// Bday
-birthQ;
 
+birthQ;
+//Horror
 function horrorQ() {
   let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
 
@@ -41,9 +41,9 @@ function horrorQ() {
     alert('You need to answer with \'yes\' or \'no\'.');
   }
 }
-// Horror
-horrorQ();
 
+horrorQ();
+// #'s of Places Visited
 function visitQ() {
   // High low, guessing
   let placesVisited = 6;
@@ -75,9 +75,8 @@ function visitQ() {
 
   }
 }
-// EXCECUTABLE CODES
-
 visitQ();
+
 // Ice cream
 function iceQ() {
   // What is my favorite ice cream
