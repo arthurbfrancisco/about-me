@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 alert('Hi, welcome to my page!');
@@ -101,18 +102,24 @@ iceQ();
 
 //Food fav
 function foodQ() {
+  // Declare the number of attempts the user has to answer the question correctly
   let attempts = 6;
   let favFood = ['mexican', 'chinese', 'indian','italian']; // answer will be lower case
+  // Flag to keep track of whether the user's answer is correct
   let correct = false;
+  // Loop while the user has remaining attempts and has not yet answered the question correctly
   while (attempts >= 1 && !correct) {
     attempts--;
     let foodAnswer = prompt('What is my fav cuisine? Mexican, Chinese, Indian, Italian').toLowerCase();
     console.log(foodAnswer);
+    // Loop through each element in the favFood array
     for (let i = 0; i <favFood.length; i++) {
+      // Check if the user's answer matches the current element in the favFood array (ignoring case)
       if (foodAnswer === favFood[i].toLowerCase()) {
         alert('Correct! I love Mexican Food!');
         //userPoints++;
         correct = true;
+        // Exit the loop
         break;
       }
     }
@@ -126,21 +133,28 @@ function foodQ() {
   }
 }
 foodQ();
-
+//Sport
 function sportQ() {
+  // Declare the number of attempts the user has to answer the question correctly
   let attempts = 6;
-  let favSports = ['basketball'];
+  // Declare an array of favorite sports for the user to guesslet favSports = ['basketball'];
   let correct = false;
+  // Flag to keep track of whether the user's answer is correct
   let userPoints = 0;
   let userAnswers = [];
-
+  // Loop while the user has remaining attempts and has not yet answered the question correctly
   while (attempts >= 1 && !correct) {
     attempts--;
+    // Display a prompt dialog asking the user to guess the favorite sport, and store the answer in a variable
     let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis').toLowerCase();
+    //Add the user's answer to the userAnswers array
     userAnswers.push(sportAnswer);
 
+    // Loop through each element in the favSports array
     for (let i = 0; i < favSports.length; i++) {
+    // Check if the user's answer matches the current element in the favSports array (ignoring case)
       if (sportAnswer === favSports[i].toLowerCase()) {
+      // Display an alert message indicating that the answer is correct
         alert('Correct! I love to watch and play basketball!');
         userPoints++;
         correct = true;
@@ -156,9 +170,13 @@ function sportQ() {
       alert('Sorry, but you need to try again!');
     }
   }
+  //Create a message string that displays the user's score and the total number of possible points
   let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
+  // Create a message string that displays the correct answer(s)
   let answersMsg = `The correct answer is: ${favSports.join(', ')}.\n`;
+  // Create a message string that displays the user's answers
   let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
+  // Display the three message strings concatenated together in a dialog box
   alert(scoreMsg + answersMsg + userAnswersMsg);
 }
 
