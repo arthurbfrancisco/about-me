@@ -17,6 +17,16 @@ h1 {
       height: 20vh; /* Sets the height of the container to the viewport height */
   }
 
+  .top-nav {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+    padding-top: 0px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 10px solid#f0730c; /* Orange line accent for border*/
+  } 
+
 
 ul {
     list-style-type: none; 
@@ -98,7 +108,7 @@ ol {
     margin: 0 auto;
     padding: 20px;
   }
-  /*Job Experience*/
+  /*Job Experience and Education*/
   .exp {
     text-align: center;
   }
@@ -124,15 +134,18 @@ ol {
     width: 1em;
     margin-left: -1em;
   }
-
+/*Top 10 */
   .tenlist {
     text-align: center;
+      
+       
     
   }
   
   .tenlist p {
     font-size: 24px;
     font-weight: bold;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
   
@@ -157,15 +170,6 @@ ol {
     border-style: 3px dotted; /*Lines seperate my paragraph*/
   }
 
-  .top-nav {
-      text-align: center;
-      text-transform: uppercase;
-      padding: 10px;
-      padding-top: 0px;
-      background-color: #0a0a23;
-      color: #fff;
-      border-bottom: 10px solid#f0730c; /* Orange line accent for border*/
-    } 
 
 
   footer {
