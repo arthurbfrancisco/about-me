@@ -129,35 +129,43 @@ foodQ();
 
 //Sports
 function sportQ() {
-  let attempts = 6;
-  let favSports = ['basketball'];
+  let attempts = 6; //Declares a new variable named attempts and assigns it the value 6.
+  let favSports = ['basketball']; //Declares a new variable named favSports and assigns it an array with one element: the string "basketball". 
+  // It is initialized to 'false' at the beginning of the function because the user has not yet answered the question correctly.
   let correct = false;
   let userPoints = 0;
   let userAnswers = [];
+  //attempts >= 1: This checks if the value of attempts is greater than or equal to 1.
   while (attempts >= 1 && !correct) {
     attempts--;
     let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis');
-    userAnswers.push(sportAnswer); // Store user's answer
+    userAnswers.push(sportAnswer); 
+    // Store user's answer
     console.log(sportAnswer);
     for (let i = 0; i < favSports.length; i++) {
       if (sportAnswer === favSports[i]) {
         alert('Correct! I love to watch and play basketball!');
-        userPoints++;
+        userPoints++; //increment the score to +1
         correct = true;
-        break;
+        break; //ends the loop
       }
     }
     // scores and points decremented by 1
     if (attempts === 1) {
       alert('You are wrong, but you are getting closer!');
-      break;
+      break; // ends loop
     }
     //IF user can not guess then it will output this
     if (!correct) {
       alert('Sorry, but you need to try again!');
     }
   }
-  // Display score and correct answers when user input
+  /* Display score and correct answers when user input
+     string is assigned to the variable scoreMsg using the let keyword.
+     userPoints variable, and ${favSports.length} is evaluated as the length
+     of the favSports array. The \n character at the end of the string represents
+    a newline character, which adds a line break after the string.
+*/
   let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
   let answersMsg = `The correct answers are: ${favSports.join(', ')}.\n`;
   let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
