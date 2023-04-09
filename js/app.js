@@ -11,7 +11,7 @@ alert(`I've never been there, but it must be a great place to travel to, ${city}
 // Funtion Declaration
 //function youAreCorrect(message) { //declaring youAreCorrect value Helper Function
 //userPoints+++; //add an increment to each function
-//c onsole.log(userPoints); // userPoints will console.log 
+//c onsole.log(userPoints); // userPoints will console.log
 //}
 
 
@@ -32,7 +32,7 @@ birthQ;
 function horrorQ() {
   let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
 
-  if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) {
+  if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) { // Lowercase will be valued even if uppercase was input
     alert('You are right, I love watching horror movies.');
   } else if (likeHorrorFlick === 'n' || likeHorrorFlick === 'no') {
     alert('You are wrong. I enjoy horror movies.');
@@ -44,7 +44,7 @@ function horrorQ() {
 horrorQ();
 
 function visitQ() {
-  // High low, guessing 
+  // High low, guessing
   let placesVisited = 6;
 
   // They have 6 attempts
@@ -106,10 +106,10 @@ function foodQ() {
   let correct = false;
   while (attempts >= 1 && !correct) {
     attempts--;
-    let foodAnswer = prompt('What is my fav cuisine? Mexican, Chinese, Indian, Italian');
+    let foodAnswer = prompt('What is my fav cuisine? Mexican, Chinese, Indian, Italian').toLowerCase();
     console.log(foodAnswer);
     for (let i = 0; i <favFood.length; i++) {
-      if (foodAnswer === favFood[i]) {
+      if (foodAnswer === favFood[i].toLowerCase()) {
         alert('Correct! I love Mexican Food!');
         //userPoints++;
         correct = true;
@@ -127,47 +127,37 @@ function foodQ() {
 }
 foodQ();
 
-//Sports
 function sportQ() {
-  let attempts = 6; //Declares a new variable named attempts and assigns it the value 6.
-  let favSports = ['basketball']; //Declares a new variable named favSports and assigns it an array with one element: the string "basketball". 
-  // It is initialized to 'false' at the beginning of the function because the user has not yet answered the question correctly.
+  let attempts = 6;
+  let favSports = ['basketball'];
   let correct = false;
   let userPoints = 0;
   let userAnswers = [];
-  //attempts >= 1: This checks if the value of attempts is greater than or equal to 1.
+
   while (attempts >= 1 && !correct) {
     attempts--;
-    let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis');
-    userAnswers.push(sportAnswer); 
-    // Store user's answer
-    console.log(sportAnswer);
+    let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis').toLowerCase();
+    userAnswers.push(sportAnswer);
+
     for (let i = 0; i < favSports.length; i++) {
-      if (sportAnswer === favSports[i]) {
+      if (sportAnswer === favSports[i].toLowerCase()) {
         alert('Correct! I love to watch and play basketball!');
-        userPoints++; //increment the score to +1
+        userPoints++;
         correct = true;
-        break; //ends the loop
+        break;
       }
     }
-    // scores and points decremented by 1
     if (attempts === 1) {
       alert('You are wrong, but you are getting closer!');
-      break; // ends loop
+      break;
     }
-    //IF user can not guess then it will output this
+
     if (!correct) {
       alert('Sorry, but you need to try again!');
     }
   }
-  /* Display score and correct answers when user input
-     string is assigned to the variable scoreMsg using the let keyword.
-     userPoints variable, and ${favSports.length} is evaluated as the length
-     of the favSports array. The \n character at the end of the string represents
-    a newline character, which adds a line break after the string.
-*/
   let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
-  let answersMsg = `The correct answers are: ${favSports.join(', ')}.\n`;
+  let answersMsg = `The correct answer is: ${favSports.join(', ')}.\n`;
   let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
   alert(scoreMsg + answersMsg + userAnswersMsg);
 }
