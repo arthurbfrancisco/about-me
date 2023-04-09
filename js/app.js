@@ -106,9 +106,9 @@ function foodQ() {
   let correct = false;
   while (attempts >= 1 && !correct) {
     attempts--;
-    let foodAnswer = prompt('What is my fav food');
+    let foodAnswer = prompt('What is my fav cuisine? Mexican, Chinese, Indian, Italian');
     console.log(foodAnswer);
-    for (let i = 0; i <favFood.length; i++) {   
+    for (let i = 0; i <favFood.length; i++) {
       if (foodAnswer === favFood[i]) {
         alert('Correct! I love Mexican Food!');
         //userPoints++;
@@ -127,5 +127,41 @@ function foodQ() {
 }
 foodQ();
 
+//Sports
+function sportQ() {
+  let attempts = 6;
+  let favSports = ['basketball'];
+  let correct = false;
+  let userPoints = 0;
+  let userAnswers = [];
+  while (attempts >= 1 && !correct) {
+    attempts--;
+    let sportAnswer = prompt('What is my favorite sport to watch and play? Basketball, Football, Baseball, Soccer, Tennis');
+    userAnswers.push(sportAnswer); // Store user's answer
+    console.log(sportAnswer);
+    for (let i = 0; i < favSports.length; i++) {
+      if (sportAnswer === favSports[i]) {
+        alert('Correct! I love to watch and play basketball!');
+        userPoints++;
+        correct = true;
+        break;
+      }
+    }
+    // scores and points decremented by 1
+    if (attempts === 1) {
+      alert('You are wrong, but you are getting closer!');
+      break;
+    }
+    //IF user can not guess then it will output this
+    if (!correct) {
+      alert('Sorry, but you need to try again!');
+    }
+  }
+  // Display score and correct answers when user input
+  let scoreMsg = `You got ${userPoints} out of ${favSports.length} points.\n`;
+  let answersMsg = `The correct answers are: ${favSports.join(', ')}.\n`;
+  let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
+  alert(scoreMsg + answersMsg + userAnswersMsg);
+}
 
-
+sportQ();
