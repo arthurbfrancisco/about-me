@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+/* When you add the 'use strict'; directive at the top of your JavaScript file or function,]
+ it will apply strict mode to all code within that scope.*/
 'use strict';
 
 alert('Hi, welcome to my page!');
