@@ -98,7 +98,7 @@ ol {
     margin: 0 auto;
     padding: 20px;
   }
-  
+  /*Job Experience*/
   .exp {
     text-align: center;
   }
@@ -127,6 +127,7 @@ ol {
 
   .tenlist {
     text-align: center;
+    
   }
   
   .tenlist p {
