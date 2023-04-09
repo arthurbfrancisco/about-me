@@ -27,7 +27,7 @@ function birthQ() {
   }
 }
 // Bday
-//birthQ;
+birthQ;
 
 function horrorQ() {
   let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
@@ -41,7 +41,7 @@ function horrorQ() {
   }
 }
 // Horror
-//horrorQ();
+horrorQ();
 
 function visitQ() {
   // High low, guessing 
@@ -76,7 +76,7 @@ function visitQ() {
 }
 // EXCECUTABLE CODES
 
-//visitQ();
+visitQ();
 // Ice cream
 function iceQ() {
   // What is my favorite ice cream
