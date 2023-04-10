@@ -7,17 +7,31 @@
         background-color: bisque;
     }
 
-h1 {
-    font-size: 3rem;
-      font-size: 3rem;
-      text-align: center; /* Centers the content horizontally */
-      display: flex; /* Makes the container a flex container */
-      justify-content: center; /* Centers the flex items vertically */
-      align-items: center; /* Centers the flex items horizontally */
-      height: 20vh; /* Sets the height of the container to the viewport height */
-  }
-
-  .top-nav {
+    .custom-heading {
+      font-family: 'Arial', sans-serif;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #a2a1a1, 0 0 20px #a8a4a4, 0 0 30px #948e8e;
+    }
+    
+    
+    /* font-family: Sets the font family to Arial or a similar sans-serif font.
+    font-size: Sets the font size to 36 pixels.
+    font-weight: Sets the font weight to bold.
+    text-align: Centers the heading text horizontally.
+    color: Sets the text color to a dark gray (#333).
+    text-shadow: Adds a light gray (ccc) shadow to the text to make it stand out more.
+    border-bottom: Adds a 1-pixel solid gray border to the bottom of the heading.
+    padding-bottom: Adds 10 pixels of padding to the bottom of the heading to separate it from the content below it.
+    margin-bottom: Adds 20 pixels of margin to the bottom of the heading to separate it from the content above it.
+    You can adjust these styles as needed to achieve the desired look for your heading. For example, you can change the font family, font size, or colors to match the style of your website. */
+    
+    .top-nav {
     text-align: center;
     text-transform: uppercase;
     padding: 10px;
