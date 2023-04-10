@@ -115,7 +115,7 @@ function iceQ() {
 
 // Call the iceQ function to start the game
 iceQ();
-;
+
 
 //Food fav
 function foodQ() {

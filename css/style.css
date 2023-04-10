@@ -137,16 +137,13 @@ ol {
 /*Top 10 */
   .tenlist {
     text-align: center;
-      
-       
-    
   }
   
   .tenlist p {
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   
   .tenlist ol {
@@ -169,8 +166,14 @@ ol {
   hr {
     border-style: 3px dotted; /*Lines seperate my paragraph*/
   }
-
-
+  .gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding-top: 0px; /* adjust the top padding as needed */
+    padding-bottom: 10px; /* adjust the bottom padding as needed */
+  }
 
   footer {
     text-align: center; /* Centers the content horizontally */
