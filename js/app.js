@@ -72,25 +72,32 @@ function visitQ() {
   }
 }
 visitQ();
-
-// Ice cream
+// What is my favorite ice cream
 function iceQ() {
-  // What is my favorite ice cream
-
   let myFavIceCream = 'rocky road'; // starting in the beginning
 
   let attemptsRemaining = 6; //attempt to try
 
   let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
+
+  let userPoints = 0;
+  let possiblePoints = 1;
+
   while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
     attemptsRemaining--; //how many attempts left
-    console.log(`You have ${attemptsRemaining} attempts remaining.`);
+    alert(`You have ${attemptsRemaining} attempts remaining.`);
     if (myFavIceCream === userResponse) {
-      console.log('You are right!');
+      alert('You are right!');
+      userPoints += possiblePoints;
+    } else if (attemptsRemaining > 0) {
+      userResponse = prompt(`Sorry, ${userResponse} is not my favorite ice cream flavor. You have ${attemptsRemaining} attempts remaining. Please try again.`);
     }
   }
+
   if (attemptsRemaining === 0) {
-    console.log(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
+    alert(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
+  } else {
+    alert(`Congratulations! You guessed my favorite ice cream flavor in ${6 - attemptsRemaining} attempts. You scored ${userPoints} out of ${possiblePoints} possible point(s).`);
   }
 }
 iceQ();
@@ -99,7 +106,7 @@ iceQ();
 function foodQ() {
   // Declare the number of attempts the user has to answer the question correctly
   let attempts = 6;
-  let favFood = ['Mexican', 'Chinese', 'Indian','Italian']; // answer will be lower case
+  let favFood = ['Mexican', 'Chinese', 'Indian', 'Italian']; // answer will be lower case
   // Flag to keep track of whether the user's answer is correct
   let correct = false;
   // Loop while the user has remaining attempts and has not yet answered the question correctly
@@ -108,7 +115,7 @@ function foodQ() {
     let foodAnswer = prompt('What is my fav cuisine? Mexican, Chinese, Indian, Italian').toLowerCase();
     console.log(foodAnswer);
     // Loop through each element in the favFood array
-    for (let i = 0; i <favFood.length; i++) {
+    for (let i = 0; i < favFood.length; i++) {
       // Check if the user's answer matches the current element in the favFood array (ignoring case)
       if (foodAnswer === favFood[i].toLowerCase()) {
         alert('Correct! I love Mexican Food!');
@@ -127,7 +134,6 @@ function foodQ() {
     }
   }
 }
-
 foodQ();
 
 //Sport
