@@ -72,35 +72,50 @@ function visitQ() {
   }
 }
 visitQ();
-// What is my favorite ice cream
+
+//Icecream Fav
 function iceQ() {
+  // Declare my favorite ice cream flavor
   let myFavIceCream = 'rocky road'; // starting in the beginning
 
+  // Declare the number of attempts the user has to answer the question correctly
   let attemptsRemaining = 6; //attempt to try
 
+  // Display a prompt dialog asking the user to guess the favorite ice cream flavor, and store the answer in a variable
   let userResponse = prompt('What is my favorite ice cream flavor? Rocky Road, Vanilla, Chocolate, Strawberry, or Mint Chocolate, or Banana Split');
 
+  // Declare variables to keep track of the user's score and the total number of possible points
   let userPoints = 0;
   let possiblePoints = 1;
 
+  // Loop while the user has remaining attempts and has not yet answered the question correctly
   while (attemptsRemaining > 0 && myFavIceCream !== userResponse) {
-    attemptsRemaining--; //how many attempts left
-    alert(`You have ${attemptsRemaining} attempts remaining.`);
+    attemptsRemaining--; // Decrease the number of attempts left
+    alert(`You have ${attemptsRemaining} attempts remaining.`); // Display the number of attempts remaining
+
+    // Check if the user's answer matches the favorite ice cream flavor
     if (myFavIceCream === userResponse) {
-      alert('You are right!');
-      userPoints += possiblePoints;
+      alert('You are right!'); // Display a message indicating that the answer is correct
+      userPoints += possiblePoints; // Increment the user's score
     } else if (attemptsRemaining > 0) {
+      // Display an alert message indicating that the answer is incorrect and prompt the user to try again
       userResponse = prompt(`Sorry, ${userResponse} is not my favorite ice cream flavor. You have ${attemptsRemaining} attempts remaining. Please try again.`);
     }
   }
 
+  // Check if the user has run out of attempts
   if (attemptsRemaining === 0) {
+    // Display a message indicating that the user is out of attempts and reveal the correct answer
     alert(`Sorry, you are out of attempts. My favorite ice cream flavor is ${myFavIceCream}.`);
   } else {
+    // Display a message indicating that the user guessed the correct flavor and reveal their score
     alert(`Congratulations! You guessed my favorite ice cream flavor in ${6 - attemptsRemaining} attempts. You scored ${userPoints} out of ${possiblePoints} possible point(s).`);
   }
 }
+
+// Call the iceQ function to start the game
 iceQ();
+;
 
 //Food fav
 function foodQ() {
