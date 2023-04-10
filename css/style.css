@@ -31,15 +31,43 @@
     margin-bottom: Adds 20 pixels of margin to the bottom of the heading to separate it from the content above it.
     You can adjust these styles as needed to achieve the desired look for your heading. For example, you can change the font family, font size, or colors to match the style of your website. */
     
+    header {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
     .top-nav {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 10px;
-    padding-top: auto;
-    background-color: #535151;
-    color: #fff;
-    border-bottom: 10px solid#621b18; /* Orange line accent for border*/
-  } 
+      background-color: #333;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      margin: 0 5px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      background-color: #555;
+    }
+    
   .image-container {
     display: flex;
     justify-content: center;
