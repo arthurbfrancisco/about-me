@@ -99,7 +99,7 @@ iceQ();
 function foodQ() {
   // Declare the number of attempts the user has to answer the question correctly
   let attempts = 6;
-  let favFood = ['mexican', 'chinese', 'indian','italian']; // answer will be lower case
+  let favFood = ['Mexican', 'Chinese', 'Indian','Italian']; // answer will be lower case
   // Flag to keep track of whether the user's answer is correct
   let correct = false;
   // Loop while the user has remaining attempts and has not yet answered the question correctly
