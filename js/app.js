@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 /* When you add the 'use strict'; directive at the top of your JavaScript file or function,]
  it will apply strict mode to all code within that scope.*/
 'use strict';
@@ -11,20 +10,7 @@ alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used 
 let city = prompt('Where are you from?');
 alert(`I've never been there, but it must be a great place to travel to, ${city}.`);
 
-//City Born
-function birthQ() {
-  let placeOfBirth = prompt('Was I born in California?');
-  console.log(placeOfBirth);
-  if (placeOfBirth === 'y' || placeOfBirth === 'yes') {
-    alert('No, I was actually born in the Philippines but raised in America.');
-  } else if (placeOfBirth === 'n' || placeOfBirth === 'no') {
-    alert('You are correct. I was born in the Philippines and I am a first generation immigrant.');
-  } else {
-    alert('Please answer with a "yes" or "no".');
-  }
-}
 
-birthQ;
 //Horror
 function horrorQ() {
   let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
@@ -37,41 +23,56 @@ function horrorQ() {
     alert('You need to answer with \'yes\' or \'no\'.');
   }
 }
-
 horrorQ();
-// #'s of Places Visited
+// CoffeeScript
+function coffeeQ() {
+  let drinkCoffee = prompt('Do I drink coffee regularly? Yes or No?').toLowerCase();
+
+  if (drinkCoffee === 'y' || drinkCoffee === 'yes'.toLowerCase()) { // Lowercase will be valued even if uppercase was input
+    alert('You are correct, I drink coffee every day.');
+  } else if (drinkCoffee === 'n' || drinkCoffee === 'no') {
+    alert('Incorrect, I am a regular coffee drinker.');
+  } else {
+    alert('Please answer with \'yes\' or \'no\'.');
+  }
+}
+coffeeQ();
+
 function visitQ() {
-  // High low, guessing
-  let placesVisited = 6;
+  let guessCount = 0;
 
-  // They have 6 attempts
-  let guessCount = 6;
-
-  // Loop and guess again, while loop will continue to run
   while (guessCount > 0) {
-    // Get the user's guess
-    let guess = parseInt(prompt('How many places have I visited between 1-7?'));
+    let guess = prompt('Have I visited more than 5 countries? Yes or No? (Answer with "Y" or "N")');
 
-    // Convert to digits
-    guess = parseInt(guess);
-
-    // Check if the guess is correct
-    if (guess === placesVisited) {
-      alert('Correct! You guessed the number of places I have visited.');
-      break; // it will break to next condition
-    } else if (guess < placesVisited) {
-      guessCount--; // subtract attempt
-      alert(`Incorrect. The number of places I have visited is higher. You have ${guessCount} guesses left.`);
-    } else if (guess > placesVisited) {
+    if (guess === 'y' || guess === 'Y' || guess === 'yes' || guess === 'Yes') {
+      alert('Correct! I have visited 6 countries.');
+      break;
+    } else if (guess === 'n' || guess === 'N' || guess === 'no' || guess === 'No') {
       guessCount--;
-      alert(`Incorrect. The number of places I have visited is lower. You have ${guessCount} guesses left.`);
+      alert(`Incorrect. I have visited more than 5 countries. You have ${guessCount} guesses left.`);
+    } else {
+      alert('Please answer with "Yes" or "No".');
     }
-    // Input correct answer
-    alert(`The correct number of places I have visited is ${placesVisited}. These places are Thailand, Vietnam, Cambodia, Bali, Philippines, and South Korea.`);
 
+    alert('The correct answer is "Yes". Next question!.');
   }
 }
 visitQ();
+
+//Height
+function heightQ() {
+  let afraidOfHeight = prompt('Am I afraid of heights? Yes or No?').toLowerCase();
+
+  if (afraidOfHeight === 'y' || afraidOfHeight === 'yes') {
+    alert('You are correct! I am afraid of heights.');
+  } else if (afraidOfHeight === 'n' || afraidOfHeight === 'no') {
+    alert('Sorry, that is incorrect. I am horrified of heights!.');
+  } else {
+    alert('Please answer with "Yes" or "No".');
+  }
+}
+heightQ();
+
 
 //Icecream Fav
 function iceQ() {
@@ -151,6 +152,20 @@ function foodQ() {
 }
 foodQ();
 
+//City Born
+function birthQ() {
+  let placeOfBirth = prompt('Was I born in California?');
+  console.log(placeOfBirth);
+  if (placeOfBirth === 'y' || placeOfBirth === 'yes') {
+    alert('No, I was actually born in the Philippines but raised in America.');
+  } else if (placeOfBirth === 'n' || placeOfBirth === 'no') {
+    alert('You are correct. I was born in the Philippines and I am a first generation immigrant.');
+  } else {
+    alert('Please answer with a "yes" or "no".');
+  }
+}
+
+birthQ;
 //Sport
 // Declare the number of attempts the user has to answer the question correctly
 let attempts = 6;
@@ -201,4 +216,4 @@ let userAnswersMsg = `Your answers were: ${userAnswers.join(', ')}.\n`;
 // Display the three message strings concatenated together in a dialog box
 alert(scoreMsg + answersMsg + userAnswersMsg);
 
-sportQ();
+
