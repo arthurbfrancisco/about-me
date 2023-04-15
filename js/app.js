@@ -2,7 +2,7 @@
  it will apply strict mode to all code within that scope.*/
 'use strict';
 
-alert('Hi, welcome to my page!');
+alert('Hi, welcome to my page, friend!');
 
 let nickname = prompt('What is your nickname?'); // Prompt user
 alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used for string interpolation
@@ -10,20 +10,9 @@ alert(`Hello ${nickname}, nice to meet you.`); // template literal that is used 
 let city = prompt('Where are you from?');
 alert(`I've never been there, but it must be a great place to travel to, ${city}.`);
 
+let intro = prompt('Let me ask you a few question, if you dont mind.'); // Prompt user
+alert(`Okay, ${nickname}, here a few question to get you started to get to know me.`); // template literal that is used for string interpolation
 
-//Horror
-function horrorQ() {
-  let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
-
-  if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) { // Lowercase will be valued even if uppercase was input
-    alert('You are right, I love watching horror movies.');
-  } else if (likeHorrorFlick === 'n' || likeHorrorFlick === 'no') {
-    alert('You are wrong. I enjoy horror movies.');
-  } else {
-    alert('You need to answer with \'yes\' or \'no\'.');
-  }
-}
-horrorQ();
 // CoffeeScript
 function coffeeQ() {
   let drinkCoffee = prompt('Do I drink coffee regularly? Yes or No?').toLowerCase();
@@ -37,7 +26,7 @@ function coffeeQ() {
   }
 }
 coffeeQ();
-
+//visited
 function visitQ() {
   let guessCount = 0;
 
@@ -73,7 +62,19 @@ function heightQ() {
 }
 heightQ();
 
+//Horror
+function horrorQ() {
+  let likeHorrorFlick = prompt('Do I like watching horror movies? Yes or No?').toLowerCase();
 
+  if (likeHorrorFlick === 'y' || likeHorrorFlick === 'yes'.toLowerCase()) { // Lowercase will be valued even if uppercase was input
+    alert('You are right, I love watching horror movies.');
+  } else if (likeHorrorFlick === 'n' || likeHorrorFlick === 'no') {
+    alert('You are wrong. I enjoy horror movies.');
+  } else {
+    alert('You need to answer with \'yes\' or \'no\'.');
+  }
+}
+horrorQ();
 //Icecream Fav
 function iceQ() {
   // Declare my favorite ice cream flavor
